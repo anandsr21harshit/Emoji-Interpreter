@@ -6,6 +6,12 @@ const emojiList = {
   "😑": "Expressionless",
   "🤔": "Thinking",
   "😫": "Tired"
+  "😎": "Smart",
+  "😋": "Yummy",
+  "🥱": "Yawn",
+  "😂" : "Laughing",
+  "😞": "Disappointed",
+  "😱": "Fearful"
 };
 
 let emojis = Object.keys(emojiList);

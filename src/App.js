@@ -5,11 +5,11 @@ const emojiList = {
   "😀": "Smile",
   "😑": "Expressionless",
   "🤔": "Thinking",
-  "😫": "Tired"
+  "😫": "Tired",
   "😎": "Smart",
   "😋": "Yummy",
   "🥱": "Yawn",
-  "😂" : "Laughing",
+  "😂": "Laughing",
   "😞": "Disappointed",
   "😱": "Fearful"
 };
@@ -27,7 +27,7 @@ export default function App() {
     if (value in emojiList) {
       setMeaning(emojiList[value]);
     } else {
-      setMeaning("failure to recognise this emoji");
+      setMeaning("Not present in our database.");
     }
   }
 
@@ -37,7 +37,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Emoji Interpreter</h1>
+      <h1 id="header">Emoji Interpreter</h1>
       <input
         onChange={inputChangeHandler}
         placeholder="Search your emoji here.."
@@ -47,13 +47,12 @@ export default function App() {
       <h3>{meaning}</h3>
 
       {emojis.map((item) => (
-        <span
-          onClick={() => clickEventHandler(item)}
-          style={{ fontSize: "2rem", padding: "1rem", cursor: "pointer" }}
-        >
+        <span onClick={() => clickEventHandler(item)} id="emoticons">
           {item}
         </span>
       ))}
+
+      <h3 id="quote"> Emoji speaks louder than words!😎 </h3>
     </div>
   );
 }
